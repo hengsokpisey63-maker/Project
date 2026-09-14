@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Out | Nova Studio</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: #111b2d;
+        --primary: #7c9cff;
+        --secondary: #6ee7c8;
+        --text: #edf3ff;
+        --muted: #a7b5d6;
+        --line: rgba(255,255,255,0.08);
+        --shadow: 0 20px 50px rgba(0,0,0,0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #09111f 0%, #0d1b2a 100%);
+        color: var(--text);
+      }
+
+      .card {
+        width: min(420px, 90%);
+        background: rgba(17,27,45,0.96);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .brand {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+
+      .brand span {
+        color: var(--secondary);
+      }
+
+      .icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 2rem;
+        background: linear-gradient(135deg, rgba(124,156,255,0.25), rgba(110,231,200,0.18));
+        border: 1px solid var(--line);
+      }
+
+      h1 {
+        margin: 0 0 0.8rem;
+        font-size: 2rem;
+      }
+
+      p {
+        color: var(--muted);
+        margin: 0 0 1.5rem;
+        line-height: 1.7;
+      }
+
+      .btn-group {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        border: none;
+        border-radius: 12px;
+        padding: 0.95rem 1.4rem;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #8f7dff);
+        color: white;
+      }
+
+      .btn-secondary {
+        background: rgba(255,255,255,0.03);
+        color: var(--text);
+        border: 1px solid var(--line);
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .small {
+        margin-top: 1.2rem;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="brand">Nova<span>Studio</span></div>
+      <div class="icon">⎋</div>
+      <h1>Sign Out</h1>
+      <p>
+        You’re about to leave your account session. Are you sure you want to sign out?
+      </p>
+
+      <div class="btn-group">
+        <button class="btn btn-primary">Yes, Sign Out</button>
+        <button class="btn btn-secondary">Cancel</button>
+      </div>
+
+      <div class="small">You can sign back in anytime.</div>
+    </div>
+  </body>
+</html>
