@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In | Nova Studio</title>
+    <style>
+      :root {
+        --bg: #0b1020;
+        --panel: #111b2d;
+        --panel-2: #18263f;
+        --primary: #7c9cff;
+        --secondary: #6ee7c8;
+        --text: #edf3ff;
+        --muted: #a7b5d6;
+        --line: rgba(255,255,255,0.08);
+        --shadow: 0 20px 50px rgba(0,0,0,0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #09111f 0%, #0d1b2a 100%);
+        color: var(--text);
+      }
+
+      .login-card {
+        width: min(420px, 90%);
+        background: rgba(17, 27, 45, 0.96);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: var(--shadow);
+        padding: 2rem;
+      }
+
+      .brand {
+        text-align: center;
+        margin-bottom: 1.4rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .brand span {
+        color: var(--secondary);
+      }
+
+      .title {
+        text-align: center;
+        margin: 0 0 1.5rem;
+        font-size: 2rem;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      label {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin-bottom: 0.3rem;
+        display: block;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.95rem 1rem;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.02);
+        color: var(--text);
+        font-size: 1rem;
+        outline: none;
+      }
+
+      input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(124, 156, 255, 0.15);
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      .row a {
+        color: var(--secondary);
+        text-decoration: none;
+      }
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .checkbox input {
+        width: auto;
+      }
+
+      .btn {
+        margin-top: 0.5rem;
+        border: none;
+        border-radius: 12px;
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), #8f7dff);
+        color: white;
+        box-shadow: var(--shadow);
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+      }
+
+      .divider {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin: 1rem 0 0.5rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+
+      .social {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 0.4rem;
+      }
+
+      .social button {
+        flex: 1;
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--line);
+        color: var(--text);
+        border-radius: 12px;
+        padding: 0.85rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .footer-text {
+        margin-top: 1.5rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .footer-text a {
+        color: var(--secondary);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-card">
+      <div class="brand">Nova<span>Studio</span></div>
+      <h1 class="title">Sign In</h1>
+
+      <form>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" />
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" />
+        </div>
+
+        <div class="row">
+          <label class="checkbox">
+            <input type="checkbox" />
+            <span>Remember me</span>
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign In</button>
+      </form>
+
+      <div class="divider">or continue with</div>
+
+      <div class="social">
+        <button type="button">Google</button>
+        <button type="button">GitHub</button>
+      </div>
+
+      <div class="footer-text">
+        Don’t have an account? <a href="#">Create one</a>
+      </div>
+    </div>
+  </body>
+</html>
